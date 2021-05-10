@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Center Without Walls • tiansamxia</title>
+  <link rel="stylesheet" href="/styles.css"/>
+  <link rel="apple-touch-icon" href="/resources/favicon.png">
+</head>
+
+<body>
+  <header class="width-720">
+    <a class="back text-large" href="/">←</a>
+  </header>
+
+  <article>
+    <header>
+      <h1 class="text-large align-center margin-bottom-4x">Center Without Walls</h1>
+      
+      <figure class="width-720">
+        <img src="./center-without-walls/center-without-walls-0.png" alt="">
+      </figure>
+      
+      <section>
+        <h2>Center Without Walls is the next-gen electronic health records & clinical admin system for DaVita. It helps the doctors and nurses working in kidney care centers to administer dialysis treatments, manage medical records, schedule patient visits, and more.</h2>
+      
+        <ul class="list-plain columns-2">
+          <li>
+            <h1 class="color-mid">Company</h1>
+            <p>DaVita</p>
+          </li>
+          <li>
+            <h1 class="color-mid">Industry</h1>
+            <p>Healthcare</p>
+          </li>
+          <li>
+            <h1 class="color-mid">Involvement</h1>
+            <p>2017–2018</p>
+          </li>
+          <li>
+            <h1 class="color-mid">Design team</h1>
+            <p class="margin-bottom-0">10–15 people</p>
+          </li>
+        </ul>
+      </section>
+    </header>
+
+    <hr class="width-720">
+
+    <section>
+      <h2 class="text-large width-720">For people in a hurry…</h2>
+
+      <div class="width-720 grid-col-2">
+        <div>
+          <h3>Experiences I gained:</h3>
+          <ul>
+            <li>
+              <p>Designing complex, mission-critical forms: rules, best practices, and pitfalls;</p>
+            </li>
+            <li>
+              <p>Honing my interaction design, visual design, and rapid prototyping skills;</p>
+            </li>
+            <li>
+              <p>Defining a design system and building a Sketch component library from scratch;</p>
+            </li>
+            <li>
+              <p>Working in-house, seeing my design choices come to fruition, and learning from mistakes;</p>
+            </li>
+            <li>
+              <p>Collaborating with product owners to gather requirements and conceptualize features;</p>
+            </li>
+            <li>
+              <p>Interfacing with the engineering team and providing continuous design support throughout implementation;</p>
+            </li>
+            <li>
+              <p>Working with remote teams (domestic & international) across multiple time zones.</p>
+            </li>
+          </ul>
+        </div>
+  
+        <div>
+          <h3>Lessons I learned:</h3>
+          <ul>
+            <li>
+              <p>In the enterprise world, it’s not uncommon to run your business on decades-old software.</p>
+            </li>
+            <li>
+              <p>Users of professional software may accept — even prefer — higher information density and complexity in exchange for efficiency.</p>
+            </li>
+            <li>
+              <p>When feedback from users (who are domain experts) seems counter-intuitive, trust them: they have years of training and experience ahead of you.</p>
+            </li>
+            <li>
+              <p>When designing for a highly regulated industry such as healthcare, you may encounter unique constraints. For instance, to protect patients’ safety, EHR systems cannot prefill with default values; the user must enter or choose them.</p>
+            </li>
+            <li>
+              <p>Don’t use lorem ipsum as dummy text on the UI, especially if your audience can read Latin.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="width-720">
+
+    <section>
+      <h2 class="text-large">Breaking down the walls</h2>
+
+      <p>Center Without Walls aims to replace several legacy software, some of which over 20 years old. These systems not only have poor usability (and aesthetics) by modern standards, but each of them is an information silo, creating artificial barriers for accessing or sharing data across them.</p>
+      <p>My work on this project was mainly in:</p>
+      <ul>
+        <li>
+          <p><strong>Form design.</strong> I designed and iterated the in-center hemodialysis treatment order, a central piece to a patient’s dialysis treatment, and laid the foundation for all other forms in the software.</p>
+        </li>
+        <li>
+          <p><strong>User interface.</strong> I also worked on the UI for other modules in the system, including patient profile, treatment plan, facility’s shift schedule, and treatment standards.</p>
+        </li>
+        <li>
+          <p><strong>Design system.</strong> I contributed to the definition of our design system, notably the grid system, typography, colors, and various form controls. I also created a component library in Sketch.</p>
+        </li>
+      </ul>
+    </section>
+
+    <hr class="width-720">
+
+    <section>
+      <h2 class="text-large">Designing the forms</h2>
+
+      <p>Like most professional software, clinical applications come with inherent complexity that cannot be “designed away.” In our case, the complexity is primarily from the myriad of details required to provide medical care to the patient.</p>
+      <p>But that’s not all: because what we do affects a patient’s life, there are numerous legal and policy requirements we need to account for, such as data privacy, procedure audits, accessibility, even clinical hygiene (more on that later). All these complexities find their way into the system; we need to keep them from the user as much as possible to make our software easy to use.</p>
+      <p>Let’s look at an example: the <em>in-center hemodialysis treatment order</em> form.</p>
+
+      <figure>
+        <img src="./center-without-walls/center-without-walls-1.png" alt="">
+      </figure>
+
+      <h3>Asking the right questions</h3>
+
+      <p>Like all forms, the treatment order allows the system to collect data from the user: in this case, the values and settings needed to perform dialysis treatment for a patient.</p>
+      <p>Unlike forms commonly used in consumer apps, such as account creation or checkout, the treatment order contains a ton of medical information familiar only to professionals. My first challenge was to work with clinicians to understand what data we have to collect, why we need them, and how to organize them.</p>
+
+      <div class="width-960 grid-col-2">
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-2.png">
+          <figcaption>I used the treatment order from the legacy system as a reference, but every field was questioned before introduced to the new form.</figcaption>
+        </figure>
+
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-3.png">
+          <figcaption>Paper sheets for documenting treatments were also studied to understand how the data will be consumed by nurses.</figcaption>
+        </figure>
+
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-4.jpg">
+          <figcaption>I interviewed clinicians and optimized the grouping & ordering.</figcaption>
+        </figure>
+
+        <figure>
+          <img src="./center-without-walls/center-without-walls-5.jpg">
+        </figure>
+      </div>
+      
+      <h3>Fine-tuning the details</h3>
+
+      <p>Another challenge I faced was to optimize for efficiency while ensuring accuracy and compliance. When it comes to a patient’s life, no detail is trivial: even a small error could cause significant damage. Here are some examples of how I tackled the challenge.</p>
+
+      <h3 class="text-large">1</h3>
+      <p><strong>Automatic unit conversions.</strong> While humans typically talk in hours & minutes, most dialysis machines accept time values in minutes only. Clinicians often need to convert between the two manually, which is tedious and error-prone. The same applies to other types of values, such as height and weight.</p>
+      <figure>
+        <img src="./center-without-walls/center-without-walls-6.png" alt="">
+      </figure>
+
+      <h3 class="text-large">2</h3>
+      <p><strong>Autocomplete in place of text fields.</strong> Some input fields expect a limited range of values, which typically requires validation and error handling. Using autocomplete removes the need for validation and simplifies data entry.</p>
+      <figure>
+        <img src="./center-without-walls/center-without-walls-7.png" alt="">
+      </figure>
+
+      <h3 class="text-large">3</h3>
+      <p><strong>Merging multiple inputs where practical.</strong> Due to regulations and policy, all treatment data must not have a default value. Combining multiple input fields into one where it makes sense allows for faster data entry without breaking the rules.</p>
+      <figure>
+        <img src="./center-without-walls/center-without-walls-8.png" alt="">
+      </figure>
+
+      <h3>“Can we make it shorter?”</h3>
+
+      <p>After a few rounds of testing with clinicians, the feedback was overwhelmingly positive, except for one thing: the form required too much scrolling.</p>
+      <p>Skeptical about the “we don’t want to scroll” comment, the researchers and I delved deeper into the why. As it turned out, it wasn’t that the clinicians didn’t want to scroll; it’s the hygiene protocols at the clinics that made it difficult for them.</p>
+      <p>From the conversations, we learned that the clinicians had to sanitize their hands before handling the patient every time they touched the computer. If crucial information is not visible on the screen, they had to walk to the computer, scroll down, sanitize, walk back, and repeat. That’s no fun.</p>
+      <p>So I took the form back to the drawing board and made several changes:</p>
+
+      <ul>
+        <li>
+          <p><strong>Label placement.</strong> In the new design, I placed labels above the inputs instead of to the left. It allowed for more flexible layout options.</p>
+        </li>
+        <li>
+          <p><strong>Grouping.</strong> I grouped related fields into sections and added a heading for each of them.</p>
+        </li>
+        <li>
+          <p><strong>Multi-column layout.</strong> To maximize space utilization, I introduced a 2- and 3-column form layout for larger monitors.</p>
+        </li>
+      </ul>
+
+      <p>These measures helped alleviate the scrolling problem while improving the form’s readability. The new version is 65% shorter in view mode on a 1280 px wide monitor.</p>
+
+      <div class="grid-col-2 width-960">
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-9.png">
+          <figcaption>Before: label to the left.</figcaption>
+        </figure>
+
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-10.png">
+          <figcaption>After: label above the input.</figcaption>
+        </figure>
+      </div>
+
+      <figure class="width-960">
+        <img src="./center-without-walls/center-without-walls-11.png">
+        <figcaption>Research on monitor resolutions used among clinics to determine breakpoints.</figcaption>
+      </figure>
+
+      <figure class="width-960">
+        <img src="./center-without-walls/center-without-walls-12.png">
+        <figcaption>Fields grouped into sections; at 1920 px, the entire order can be viewed in full with no scrolling necessary.</figcaption>
+      </figure>
+    </section>
+
+    <hr class="width-960">
+
+    <section>
+      <h2 class="text-large">Other UI & UX work</h2>
+
+      <p>Besides form design, I also contributed to the interaction, visual, and motion design for other modules in Center Without Walls. Below are a selection of examples.</p>
+
+      <div class="grid-col-2 width-960">
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-13.png">
+          <figcaption>Patient details.</figcaption>
+        </figure>
+
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-14.png">
+          <figcaption>Treatment plan.</figcaption>
+        </figure>
+      </div>
+
+      <div class="grid-col-2 width-960">
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-15.png">
+          <figcaption>Shift schedule.</figcaption>
+        </figure>
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-16.png">
+          <figcaption>Treatment standards.</figcaption>
+        </figure>
+      </div>
+
+      <figure class="width-960">
+        <img src="./center-without-walls/center-without-walls-17.png">
+        <figcaption>Interaction flow for documenting allergies for a patient.</figcaption>
+      </figure>
+
+      <figure class="width-960">
+        <img src="./center-without-walls/center-without-walls-18.png">
+        <figcaption>Interactive prototype for the appointment calendar.</figcaption>
+      </figure>
+
+      <figure class="width-960">
+        <img src="./center-without-walls/center-without-walls-19.gif">
+        <figcaption>Animated prototype demonstrating form validations.</figcaption>
+      </figure>
+    </section>
+
+    <hr class="width-960">
+
+    <section>
+      <h2 class="text-large">Building the design system</h2>
+
+      <p>Parallel to working on product features, I actively participated in the creation of our design system.</p>
+      <p>Drawing from my experience designing the treatment order, I helped shape various components related, but not limited to forms, such as buttons, dropdowns, text fields, checkboxes, and radio buttons. I also helped document our collective decisions on core elements, such as color, typography, and grid.</p>
+      <p>Finally, I created a shared patterns library in Sketch and added the majority of components to it. The Sketch library helped the team design faster while keeping consistency across individual work.</p>
+
+      <div class="grid-col-2 width-960">
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-20.png" alt="">
+        </figure>
+
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-21.png" alt="">
+        </figure>
+      </div>
+
+      <div class="grid-col-2 width-960">
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-22.png" alt="">
+        </figure>
+
+        <figure class="margin-bottom-0">
+          <img src="./center-without-walls/center-without-walls-23.png" alt="">
+        </figure>
+      </div>
+
+      <figure class="width-960">
+        <img src="./center-without-walls/center-without-walls-24.png">
+        <figcaption>Examples of components in the Sketch library.</figcaption>
+      </figure>
+
+      <figure class="width-960">
+        <img src="./center-without-walls/center-without-walls-25.gif">
+        <figcaption>Form design guidelines.</figcaption>
+      </figure>
+
+      <figure class="width-960">
+        <img src="./center-without-walls/center-without-walls-26.gif">
+        <figcaption>Responsive layout introduction & reference guide.</figcaption>
+      </figure>
+    </section>
+
+    <hr class="width-960">
+
+    <section>
+      <h2 class="text-large">Bonus track: photographing the team</h2>
+
+      <p>Outside of design work, I helped take photos of new and existing team members for their profiles. Below is a collage from the B-rolls I took during the photo shoot.</p>
+
+      <figure>
+        <img src="./center-without-walls/center-without-walls-27.jpg" alt="">
+      </figure>
+    </section>
+  </article>
+  
+  <hr class="width-960">
+
+  <footer class="width-960">
+    <a class="logotype" href="/">
+      <img src="/resources/logotype.svg" alt="Tian Sam Xia">
+    </a>
+
+    <p class="text-small align-right margin-0">Crafted in Seattle<br>© 2021</p>
+  </footer>
+</body>
+</html>
