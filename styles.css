@@ -22,6 +22,8 @@
     --color-mid: hsl(0,0%,44%);
     --color-low: hsl(0,0%,22%);
     --color-bg:  black;
+
+/*  font-size: clamp(16px, 1.25vw, 19.2px); */
 }
 
 /*------------------------ Foundations -----------------------*/
@@ -196,8 +198,6 @@ hr {
 .width-720 { max-width: 720px; }
 
 .width-960 { max-width: 960px; }
-
-.width-1224 { max-width: 1224px; }
 
 .width-full { max-width: 100vw; }
 
