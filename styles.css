@@ -20,7 +20,7 @@
 
     --color-hi:  hsl(0,0%,88%);
     --color-mid: hsl(0,0%,44%);
-    --color-low: hsl(0,0%,15%);
+    --color-low: hsl(0,0%,22%);
     --color-bg:  black;
 }
 
@@ -41,7 +41,7 @@ body {
     line-height: var(--unit-1x);
     color: var(--color-hi);
     background-color: var(--color-bg);
-    margin: 0 16px; /* 16px left & right */
+    margin: 0 clamp(16px, 3.125vw, 32px); /* 16px left & right, up to 32px */
 }
 
 /*------------------------ Text styles -----------------------*/
@@ -66,7 +66,7 @@ p, li {
     font-weight: 500; /* Medium */
 }
 
-p strong {
+strong {
     font-weight: 600; /* Semi Bold */
 }
 
@@ -137,7 +137,7 @@ img, video {
 
 hr {
     border: none;
-    border-bottom: 1px solid var(--color-hi);
+    border-bottom: 1px solid var(--color-mid);
     max-width: var(--line-length);
     margin: var(--unit-1x) auto; /* 24px top & bottom */
 }
