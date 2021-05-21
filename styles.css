@@ -4,7 +4,7 @@
 /*------------------------- Variables ------------------------*/
 
 :root {
-    --font-main: "Inter var", ui-sans-serif, sans-serif;
+    --font-main: "Inter var", system-ui, ui-sans-serif, sans-serif;
     --font-alt: "eb-garamond", ui-serif, serif;
     --font-mono: ui-monospace, monospace;
     --font-size-s: 0.875rem; /* 14px */
