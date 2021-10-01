@@ -41,7 +41,7 @@ body {
     line-height: var(--unit-1x);
     color: var(--color-hi);
     background-color: var(--color-bg);
-    margin: clamp(48px, 5vw, 96px) clamp(16px, 5vw, 32px) var(--unit-4x); /* 48–96px top, 16–32px left & right, 96px bottom */
+    margin: clamp(48px, 5vw, 96px) clamp(16px, 5vw, 32px); /* 48–96px top & bottom, 16–32px left & right */
 }
 
 /*------------------------ Text styles -----------------------*/
