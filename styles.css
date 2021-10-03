@@ -107,6 +107,10 @@ p, ol, ul {
     margin-bottom: var(--unit-1x); /* 24px bottom */
 }
 
+li:last-of-type p, div > p:last-of-type {
+    margin-bottom: 0;
+}
+
 ol, ul {
     padding-left: 2rem; /* 32px */
 }
@@ -136,7 +140,7 @@ img.profile {
 
 hr {
     border: none;
-    border-bottom: 1px solid var(--color-low);
+    border-bottom: 1px solid var(--color-mid);
     max-width: var(--line-length);
     margin: 0 auto;
 }

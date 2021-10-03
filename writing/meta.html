@@ -9,232 +9,243 @@
 </head>
 
 <body>
-  <header>
+  <header class="width-720">
     <a class="back text-large" href="/">←</a>
   </header>
 
   <article>
     <header>
-      <h1>Design Doc: tiansamxia.com</h1>
-      <h1 class="color-mid">May 2021</h1>
+      <h1 class="width-720">Design Doc: tiansamxia.com</h1>
+      <h1 class="color-mid width-720">May 2021</h1>
 
-      <figure>
+      <figure class="width-720">
         <img src="./meta/meta-0.png" alt="">
       </figure>
-
-      <p>This document describes the decisions, process, and thinking behind this website, tiansamxia.com. In doing so, it also demonstrates my approach to writing a UX design doc.</p>
-      <p>Related: <a href="/writing/design-ethos.html" target="_blank">Design Ethos</a>.</p>
     </header>
 
-    <hr>
-
-    <section>
-      <h2 class="text-large">Context and scope</h2>
-      <p>tiansamxia.com is my personal website where I showcase my work and share projects, photos, and writings. Previously, I had built and hosted the site with Squarespace. In this version, I plan to design and code it by myself.</p>
-      <p>Using services like Squarespace allowed me to focus on the content — the most important, no doubt — but required giving up fine control over its presentation. I became a passenger rather than a driver. I also didn’t have full ownership of my site: the site is “mine” as long as I pay rent; once unsubscribed, I need to move all my stuff out if I don’t want to lose them.</p>
-      <p>Crafting the site myself is an opportunity to bring everything back to the essentials: no CMS, database, or bloated JavaScript; just plain, straightforward HTML & CSS written by a human, readable by another. I can also use this chance to catch up on the latest in web development and practice my HTML/CSS skills.</p>
+    <section class="grid-col-asymmetric width-720">
+      <h2 class="margin-top-0 margin-left-0">Overview</h2>
+      <div>
+        <p>This document describes the thinking process and design decisions behind this website, tiansamxia.com. In doing so, it also demonstrates my approach to writing a UX design doc.</p>
+        <p>See also: <a href="/writing/design-ethos.html" target="_blank">Design Ethos</a>.</p>
+      </div>
     </section>
 
-    <section>
-      <h2 class="text-large">Goals</h2>
-      <ul>
+    <hr class="width-720">
+
+    <section class="grid-col-asymmetric width-720">
+      <h2 class="margin-top-0 margin-left-0">Context and scope</h2>
+      <div>
+        <p>tiansamxia.com is my personal website where I showcase my work and share projects, photos, and writings. Previously, I had created and hosted the site with Squarespace. In this version, I decided to design and code it by myself.</p>
+        <p>Using services like Squarespace allowed me to focus on the content — the most important, no doubt — but required giving up fine control over its presentation. I became a passenger rather than the driver. I also didn’t have full ownership over my site: it was “mine” as long as I paid the rent; once stopped, I’d need to move all my stuff out if I didn’t want to lose them.</p>
+        <p>Crafting the site myself is an opportunity to bring everything back to the essentials: no CMS, database, or JavaScript frameworks; just plain, straightforward HTML & CSS written by a human, readable by another. I can also use this chance to catch up on the latest web technology and practice my HTML and CSS skills.</p>
+      </div>
+    </section>
+
+    <hr class="width-720">
+
+    <section class="grid-col-asymmetric width-720">
+      <h2 class="margin-top-0 margin-left-0">Goals</h2>
+      <ul class="margin-bottom-0">
         <li>
-          <p><strong>Make it personal:</strong> have complete control and ownership over my site’s design & content.</p>
+          <p><strong>Back to the essentials:</strong> text, images, video, etc., all marked up in HTML and styled with global CSS — zero JavaScript.</p>
         </li>
         <li>
-          <p><strong>Back to essentials:</strong> text, images, video, audio, marked up in HTML and styled with root-level CSS — no JavaScript required.</p>
+          <p><strong>Quiet & understated:</strong> the design should serve the content and not attract attention itself. “As little design as possible.”</p>
         </li>
         <li>
-          <p><strong>Typography-first:</strong> use pure typographic techniques to define layout, establish hierarchy, and express interactivity.</p>
+          <p><strong>Typography-first:</strong> text as an interface — use typographic rather than graphic treatments to define layout & structure.</p>
         </li>
         <li>
-          <p><strong>Quiet & understated:</strong> the design should serve the content and not attract attention itself. Use minimal sizes, weights, colors, etc.</p>
+          <p><strong>Follow <a href="https://frankchimero.com/blog/2015/the-webs-grain/">the web’s grain</a>:</strong> a web experience true to its building materials; no scroll-hijacking or over-the-top animations.</p>
         </li>
         <li>
-          <p><strong>Follow <a href="https://frankchimero.com/blog/2015/the-webs-grain/">the web’s grain</a>:</strong> embrace the material’s intrinsic properties and use them to create a natural, straightforward interface.</p>
+          <p><strong>Fast & responsive:</strong> “to add speed, add lightness” — a petite website is easier to implement and performs better.</p>
         </li>
         <li>
-          <p><strong>Keep it fast, lightweight & responsive:</strong> keep things close to the metal: it helps performance and makes implementation easier.</p>
+          <p><strong>Low maintenance:</strong> minimize dependency on third-party tools and services. Choose open-source over proprietary.</p>
         </li>
         <li>
-          <p><strong>Low dependency:</strong> rely on as few third-party tools & services as possible. When necessary, choose open-source over proprietary.</p>
+          <p><strong>Have some fun:</strong> I tend to make things look too serious, so this is a reminder for myself.</p>
         </li>
       </ul>
     </section>
     
-    <section>
-      <h2 class="text-large">Non-goals</h2>
-      <ul>
+    <section class="grid-col-asymmetric width-720">
+      <h2 class="margin-top-0 margin-left-0">Non-goals</h2>
+      <ul class="margin-bottom-0">
         <li>
           <p><strong>Make an impression.</strong> It’s not a goal to create a novel or eccentric site that stands out. Let the work speak for itself.</p>
         </li>
         <li>
-          <p><strong>Fully responsive design.</strong> It shouldn’t break on a phone, but complex layout changes and responsive images can come later.</p>
+          <p><strong>Fully responsive design.</strong> It shouldn’t break on a phone, but responsive grid and images can come later.</p>
         </li>
         <li>
-          <p><strong>Support legacy browsers.</strong> If you’re reading this on the latest stable version of Safari, Firefox, or Chrome, you will be fine.</p>
+          <p><strong>Legacy browser support.</strong> If you’re reading this on the latest stable version of Safari, Firefox, or Chrome, you will be fine.</p>
         </li>
         <li>
-          <p><strong>Light & dark mode, typeface switch, keyboard shortcuts, etc.</strong> These are nice-to-haves that may come in the future, but not now.</p>
+          <p><strong>Light & dark themes, keyboard shortcuts, etc.</strong> These are nice-to-haves that may come in the future, but not now.</p>
         </li>
       </ul>
     </section>
 
-    <section>
-      <h2 class="text-large">Detailed design</h2>
+    <hr class="width-720">
 
-      <p>In the sections below, I’ll cover some design decisions and the rationale behind them. Although it looks tidy and linear here, the actual process was far more convoluted and interwoven: changing the primary typeface affects the body text size, the text size affects the grid, et cetera, et cetera. See <em>alternatives considered</em> section for select detours and deadends.</p>
+    <section class="grid-col-asymmetric width-720">
+      <h2 class="margin-top-0 margin-left-0">Detailed design</h2>
 
-      <h3>Typeface: Inter</h3>
+      <div>
+        <p>In the sections below, I’ll cover some design decisions and the rationale behind them. Although it looks tidy and linear here, the actual process was far more convoluted and interwoven: changing the primary typeface affects the body text size, the text size affects the grid, et cetera, et cetera. See <em>alternatives considered</em> section for select detours and deadends.</p>
 
-      <p>To keep it simple and essential, I decided to use just one typeface for body text, headings, captions, and UI elements. As a soft requirement, the typeface chosen should look similar to fallback system UI faces — San Francisco, Roboto, Segoe UI, etc. — which are all <em>sans serif</em>.</p>
-      <p>I chose Rasmus Andersson’s <a href="https://rsms.me/inter/" target="_blank">Inter</a> because it is:</p>
-      <ul>
-        <li>Highly legible as the body face (smaller text);</li>
-        <li>Flexible enough for headings (9 weights, in both roman and italic);</li>
-        <li>Designed to function as UI (where its name came from);</li>
-        <li>Free & open-source (“low dependency”).</li>
-      </ul>
-      <p>To complement the primary typeface, I also chose <a href="http://www.georgduffner.at/ebgaramond/" target="_blank">EB Garamond</a>, an open-source, digital replication of the classic serif face designed by 16th-century typographer Claude Garamont. It will be used sparingly in places such as quotations.</p>
-      <figure>
-        <img src="./meta/meta-1.png" alt="">
-      </figure>
+        <h3>Typeface: Inter & EB Garamond</h3>
 
-      <h3>Type scale: 14 • 18 • 24</h3>
+        <p>The fewer fonts a website uses, the faster it loads (goal: “fast & responsive”). Therefore I decided to use only one typeface for almost everything: body text, titles, headings, captions, etc.</p>
+        <p>Bonus challenge: the chosen typeface should look similar to system fallbacks — <em>San Francisco</em>, <em>Roboto</em>, <em>Segoe UI</em>, etc. — so even if the webfont doesn’t load correctly, the site still looks alright (goal: “low maintenance”).</p>
+        <p>I chose Rasmus Andersson’s <a href="https://rsms.me/inter/" target="_blank">Inter</a> because it is:</p>
+        <ul>
+          <li>Highly legible, even at small sizes (body & caption text);</li>
+          <li>Available as a <em>variable font</em> (wide range of design variants);</li>
+          <li>Designed for UI (where its name came from);</li>
+          <li>Free & open-source (“low maintenance”).</li>
+        </ul>
+        <p>Besides Inter, I also used <a href="http://www.georgduffner.at/ebgaramond/" target="_blank">EB Garamond</a>, an open-source, digital replication of the classic serif face designed by 16th-century typographer Claude Garamont. It complements the main sans-serif face and shows up sparingly on the site.</p>
+        <figure>
+          <img src="./meta/meta-1.png" alt="">
+        </figure>
 
-      <p>Next, I needed to determine the body text size and use it as the origin to define a type scale. To do that, I first need to set some boundaries:</p>
-      <ul>
-        <li>Base unit: 8 px (half the default 16 px root font-size, or 0.5 rem);</li>
-        <li>Line height in multiples of 8 px (16, 24, 32, etc.);</li>
-        <li>Narrowest viewport supported: 320 px (4-inch iPhone models);</li>
-        <li>Max line length should yield around 65–75 characters (optimal).</li>
-      </ul>
-      <p>After extensive experiments, I decided to use 18 px Inter in regular as the body font. Line height is 24 px, which will be the unit for spacing: 2-line is 48 px, 4-line is 96 px, and so on.</p>
-      <p><em>Aside: I realized there’s no need to adjust text size based on the device: manufacturers have already done that work for us. An 18 px font displayed on an iPhone is about 83% the physical size of that on an iPad because the former has a higher pixel density. Likewise, the same font is physically enlarged to 120% when displayed on a Mac. However, because we usually hold our phones closer to our eyes and monitors farther, the optical sizes remain (roughly) the same.</em></p>
-      <p>From the body text, it’s not difficult to find suitable sizes for smaller & larger text: 14 px for captions, headers, and footers; 24 px for large headings. This scale will be the basis for all text styles.</p>
-      <figure>
-        <img src="./meta/meta-2.png" alt="">
-      </figure>
+        <h3>Type scale: 14 • 18 • 24</h3>
 
-      <h3>Hierarchy: one change at a time</h3>
+        <p>Next, I needed to determine the body text size and use it as the basis for a type scale. To do that, I first needed to set some boundaries:</p>
+        <ul>
+          <li>Base unit: 8 px, or 0.5 rem (“follow the web’s grain”);</li>
+          <li>Line height: 1, 1.5, or 2 rem;</li>
+          <li>Line length: 65–75 characters per line (“typography-first”);</li>
+          <li>Narrowest viewport supported: 320 px.</li>
+        </ul>
+        <p>After extensive experiments, I set the body text size at 18 px. Line height is 24 px (1.5 rem), which is also the unit for spacing: 2-line is 48 px, 4-line is 96 px, and so on.</p>
+        <p><small>Aside: Contrary to conventional belief, there isn’t a strong need to adjust text size based on the device; manufacturers have already done that work for us. For instance, iPhone’s screen has a pixel density about 20% higher than iPad’s, so texts on iPhone will be about 20% smaller — if compared side by side. However, because we typically hold our phones closer, their optical sizes will be similar. The viewing distance compensated for the difference in absolute size.</small></p>
+        <p>Using the line height as a guide, I settled on one smaller and one larger text size: 14 px for captions and footnotes; 24 px for titles and big headings. These three sizes form the type scale.</p>
+        <figure>
+          <img src="./meta/meta-2.png" alt="">
+        </figure>
 
-      <p>With the type scale defined, I moved on to creating hierarchy within the text. I counted five levels of hierarchy from my content:</p>
-      <ol>
-        <li>Title</li>
-        <li>Heading</li>
-        <li>Subheading</li>
-        <li>Body</li>
-        <li>Caption/notes/etc.</li>
-      </ol>
-      <p>One way to communicate this structure visually is to increase text size (and often weight): subheadings bigger than the body, headings bigger than subheadings, and so forth. A problem with this approach is <em>styling inflation:</em> text size snowballs as the level goes up, making page titles comically large.</p>
-      <p>But sizing and weight aren’t the only tools for visual hierarchy. Here’s a list I adapted from Frank Chimero’s <a href="https://frankchimero.com/blog/2020/scales-and-hierarchy/" target="_blank">fantastic series on site redesign</a>:</p>
-      <ol>
-        <li>Spacing (or positioning)</li>
-        <li>Weight</li>
-        <li>Color</li>
-        <li>Size</li>
-        <li>Typeface (or a different style: italic, small caps, etc.)</li>
-        <li>Accent (graphical decorations)</li>
-      </ol>
-      <p>My approach was: change one parameter at a time between levels and use the smallest increment necessary to prevent inflation.</p>
-      <p>I started with the obvious: let the lowest level headings (subheading) be the same size as body text, but with a heavier weight (semi-bold) and extra spacing above (2-line):</p>
-      <figure>
-        <img src="./meta/meta-3.png" alt="">
-      </figure>
-      <p>Next, higher-level headings should be more prominent visually, but it’s not necessary to increase both size and weight, so the weight stays the same:</p>
-      <figure>
-        <img src="./meta/meta-4.png" alt="">
-      </figure>
-      <p>For the title, I could alternate to increasing the weight again, but that would give it too much emphasis — there’s only one title per page, and it’s already at the top. Instead, I used spacing to do the trick (and color if the page has a subtitle):</p>
-      <figure>
-        <img src="./meta/meta-5.png" alt="">
-      </figure>
-      <p>Of course, the exact sizing and spacing are not rigid: the hierarchy should serve the content, not the other way around.</p>
+        <h3>Hierarchy: one change at a time</h3>
 
-      <h3>Color: monochromatic</h3>
+        <p>With the type scale defined, I moved on to creating a structure within the text. There are five levels of hierarchy in my content:</p>
+        <ol>
+          <li>Title</li>
+          <li>Heading</li>
+          <li>Subheading</li>
+          <li>Body</li>
+          <li>Caption/footnote/etc.</li>
+        </ol>
+        <p>One way to visually communicate this structure is to increase text size as the level moves up: subheadings bigger than body texts, headings bigger than subheadings, and so forth. That’s also the default behavior of headings in HTML. The problem is, text size often inflates so quickly that we end up with comically huge titles.</p>
+        <p>But size isn’t the only tool for creating hierarchy. Here’s a list of typographic tools at our disposal, adapted from <a href="https://frankchimero.com/blog/2020/scales-and-hierarchy/" target="_blank">Frank Chimero</a>:</p>
+        <ul>
+          <li>White space</li>
+          <li>Size</li>
+          <li>Weight</li>
+          <li>Style (italic, small caps, or a different typeface altogether)</li>
+          <li>Color (this is borderline between typographic and graphic)</li>
+        </ul>
+        <p>My approach: use one tool at a time, and use the smallest increment necessary (goal: “quiet & understated”).</p>
+        <p>I started with the obvious: subheadings are the same size as body text, only in a heavier weight (semi-bold):</p>
+        <figure>
+          <img src="./meta/meta-3.png" alt="">
+        </figure>
+        <p>Next, headings are the same weight as subheadings, but in a larger size (I also added an extra line of white space to make them more prominent):</p>
+        <figure>
+          <img src="./meta/meta-4.png" alt="">
+        </figure>
+        <p>Finally, we have the title. Since there’s only one title per page, and it’s already at the top, it’ll be too much to increase size or weight further. Instead, I kept the title the same size & weight as subheadings and used white space to do the trick (if the page has a subtitle, it’ll be in a lighter color):</p>
+        <figure>
+          <img src="./meta/meta-5.png" alt="">
+        </figure>
+        <p>Of course, the exact sizing and spacing can vary based on the page: the hierarchy should serve the content, not the other way around (“quiet & understated”).</p>
 
-      <p>Color is perhaps the easiest decision: there is none. To keep the design quiet and understated, I used three shades of grey against the background for high (body text), medium (supporting text, links), and low contrast. Nothing else to see here, quite literally.</p>
-      <p>The more interesting question to address is: why is it dark by default? The logic is as follows:</p>
-      <ul>
-        <li>To simplify implementation, I’ll begin with just one theme;</li>
-        <li>A light theme doesn’t work well in the dark; dark works in both;</li>
-        <li>Bonus: a true black background can save energy on LED displays, in addition to saving your eyes.</li>
-      </ul>
-      <figure>
-        <img src="./meta/meta-6.png" alt="">
-      </figure>
-      <p>The last thing I’ll mention here is: color is where I indulged the logical, mathematical beauty I’m usually unable to on a customer-facing project. The three greys have a luminance of 88%, 44%, 22%, respectively, echoing the logarithmic nature of the human vision.</p>
+        <h3>Color: monochromatic</h3>
 
-      <h3>Grid: text spans up to 600 px, images vary by aspect ratio</h3>
+        <p>Color is perhaps the easiest decision: greyscale only. I used three shades of grey for high (primary content), medium (supporting content), and low contrast against the background. The default color theme is dark.</p>
+        <p>Why dark? Here’s the logic:</p>
+        <ul>
+          <li>To simplify implementation, I’ll begin with just one theme;</li>
+          <li>Light theme is too bright in the dark; dark theme works in either light or dark;</li>
+          <li>Bonus: a pure black background can save energy on OLED displays, in addition to protecting the eyes.</li>
+        </ul>
+        <figure>
+          <img src="./meta/meta-6.png" alt="">
+        </figure>
 
-      <p>The grid system for this site is simple: text flows until the max line length (600 px), top to bottom; images and videos are allowed to span beyond the measure. On some occasions, I use a 2-column layout on text (such as the index page) or images (such as photoessays).</p>
-      <p>The max line length was derived like this:</p>
-      <ul>
-        <li>On a 320 px viewport, assume 16 px margins: 320−16×2=288 px;</li>
-        <li>Double the columns & add a 24 px gutter: 288×2+24=600 px;</li>
-        <li>Test it with body content: 600 px yields around 74 characters, which falls within the optimal 65–75 characters range.</li>
-      </ul>
-      <p>For images, the goal was to display portrait and landscape ones at the same size, only rotated; they should also look harmonious with text. After a ton of experiments, I determined the following dimensions:</p>
-      <ul>
-        <li>480×720 px (2:3)</li>
-        <li>540×720 px (3:4)</li>
-        <li>600×600 px (1:1)</li>
-        <li>720×540 px (4:3)</li>
-        <li>720×480 px (3:2)</li>
-        <li>960×540 px (16:9)</li>
-        <li>960×480 px (2:1)</li>
-      </ul>
-      <figure class="width-960">
-        <img src="./meta/meta-7.png" alt="">
-      </figure>
+        <h3>Grid: it’s complicated (but doesn’t have to be)</h3>
 
-      <h3>IA & navigation: always just one tap away from home</h3>
+        <p>I’ll confess: I have an obsession with grid systems. I lose myself in tweaking the numbers for the gutters, columns, and margins like solving a sudoku puzzle. I win if they’re all integers divisible by 8.</p>
+        <p>So after sinking hundreds of hours designing “the ultimate grid system,” my conclusion is: grid for the web is hard. I know.</p>
+        <p>Multi-column grids, which are fantastic for print, don’t work on the web. A web page is bottomless, so the content will keep flowing until <em>it</em> ends — not where the <em>page</em> ends. You could force a multi-column design, sure, but it breaks as soon as the viewport gets too narrow — because a web page is also not opinionated about its width. It can go from 320 px to 2560 px and beyond: that’s a difference between 1 and 8 columns.</p>
+        <p>What do we do, then? Well, we can go the easy way or the hard way.</p>
+        <p>The hard way is: change the layout every time it wants to break. So if you started with an 8-column design, it will change to 6, 4, 2, and eventually a single column. Lots of details to think about and lots of work to get them right, of course.</p>
+        <p>Or you can choose the easy way: start with just one column (a.k.a. <em>mobile-first</em>). You could still have 2-up or 3-up layouts when there’s enough room, but it “just works” as the viewport gets wider. The only thing to worry about is text measure (unless you want your site to look like <em>Wikipedia</em>).</p>
+        <p>For my website, I chose the second approach. Content starts with a single column; text blocks have a max-width of 600 px (roughly 75 characters); media can go beyond that depending on its aspect ratio:</p>
+        <ul>
+          <li>480×720 px (2:3)</li>
+          <li>540×720 px (3:4)</li>
+          <li>600×600 px (1:1)</li>
+          <li>720×540 px (4:3)</li>
+          <li>720×480 px (3:2)</li>
+          <li>960×540 px (16:9)</li>
+          <li>960×480 px (2:1)</li>
+        </ul>
+        <figure>
+          <img src="./meta/meta-7.png" alt="">
+        </figure>
+        <p>To add variety and prevent pages from looking like they’re from the early 2000s, I also used an asymmetrical 2-column layout on the home page and some content pages (including this one). Thanks to CSS Grid, they gracefully revert to single-column when the viewport is narrow.</p>
 
-      <p>I took a minimal approach to my site’s navigational structure: as flat as possible. Rather than coming up with arbitrary groupings, landing pages, and an intricate menu system to access them, I decided to lay it all out on my index page. Bonus effect: browsers will automatically treat “index.html” as the homepage.</p>
-      <p>The links to content pages find their way into one of these categories:</p>
-      <ul>
-        <li><strong>Work:</strong> case studies related to my work projects.</li>
-        <li><strong>Projects:</strong> non-work projects, including this website.</li>
-        <li><strong>Stories:</strong> writings and photoessays.</li>
-        <li><strong>About:</strong> my design ethos, bio & contact information.</li>
-      </ul>
-      <p>This flat structure also brings another benefit: you are always just one tap away from home. It allowed me to distill the header and footer on content pages to their purest form: the “header” is just a back button; the footer has my logotype (which also acts as a back button, so you don’t need to scroll back up) on the left and static text on the right.</p>
-      <div class="width-960 grid-col-2">
-        <figure class="margin-bottom-0">
+        <h3>Navigation: always just one step away from home</h3>
+
+        <p>Older versions of my website used to have three levels: home, collections (“work,” “photography,” etc.), and content pages. In this version, I reduced it down to two: home and content.</p>
+        <p>Something magical happens to the navigation when there are only two levels: you don’t need any. Anywhere on the site, you are only one step away from home. Gone are the landing pages for each collection, a persistent header with links, and a mini sitemap in the footer. The new “header” is just a back button.</p>
+        <p>The new home page also returns to its roots: an index of the entire site (goal: “back to the essentials”). The footer, relieved from its sitemap-bearing duty, now contains only one link — to go home, so you don’t have to scroll back to the top again.</p>
+
+        <figure>
           <img src="./meta/meta-8.png" alt="">
-          <figcaption class="align-center">Header & footer on the index page.</figcaption>
+          <figcaption class="align-center">Page header (back button).</figcaption>
         </figure>
         <figure>
           <img src="./meta/meta-9.png" alt="">
-          <figcaption class="align-center">Header & footer on content pages.</figcaption>
-        </figure>  
-      </div>
-      
-      <h3>Logotype & favicon: understated fun</h3>
+          <figcaption class="align-center">Page footer.</figcaption>
+        </figure>
 
-      <p>Perhaps the only “personality” I added to my otherwise neutral and sterile personal site was the logotype & favicon design, although they came more by inspiration than aspiration.</p>
-      <p>The logotype idea came after failing to make the name work in a single line no matter how hard I tried. “What if we stacked them?” — hmm, interesting. “How about all lowercase?” — nope, doesn’t work. “What if we aligned them by the shared letter <strong>a</strong>?” — now we’re getting somewhere.</p>
-      <figure>
-        <img src="./meta/meta-10.png" alt="">
-      </figure>
-      <p>The favicon was an example of “limitation galvanizes imagination”: at 16×16 px size, no details in the logotype were discernable. So I kept reducing the mark until there’s only one letter left: <strong>a</strong> (times three).</p>
-      <figure>
-        <img src="./meta/meta-11.png" alt="">
-      </figure>
+        <p>Besides indexing content, the home page also absorbs the former “about” and “contact” pages. Now it’s one less click/tap to find a blurb about me or ways to connect.</p>
+
+        <h3>Logotype & favicon: understated fun</h3>
+
+        <p>Perhaps the only “personality” I added to my otherwise neutral and sterile website is the logotype and favicon design (goal: “have some fun”).</p>
+        <p>The logotype idea came after numerous attempts at creating a personal logo from my name. “What if I stacked them?” — hmm, interesting. “How about all lowercase?” — nope, that didn’t work. “What if I aligned them by the shared letter <strong>a</strong>?” — now we’re getting somewhere.</p>
+        <figure>
+          <img src="./meta/meta-10.png" alt="">
+          <figcaption class="align-center">Evolution of the logotype.</figcaption>
+        </figure>
+        <p>The favicon was a classic example of “limitation galvanizes imagination”: at 16×16 px size, no details in the logotype were discernable. So I kept reducing the mark until there was only one letter left: <strong>a</strong>.</p>
+        <figure>
+          <img src="./meta/meta-11.png" alt="">
+          <figcaption class="align-center">Evolution of the favicon.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <section>
-      <h2 class="text-large">Alternatives considered</h2>
+    <hr class="width-720">
 
-      <figure>
+    <section>
+      <h2 class="width-720">Alternatives considered</h2>
+
+      <figure class="width-720">
         <img src="./meta/meta-12.png" alt="">
         <figcaption class="align-center">Typeface: sans & serif alternatives.</figcaption>
       </figure>
-      <figure>
+      <figure class="width-720">
         <img src="./meta/meta-13.png" alt="">
         <figcaption class="align-center">Line height & line length: an analysis.</figcaption>
       </figure>
-      <figure>
+      <figure class="width-720">
         <img src="./meta/meta-14.png" alt="">
         <figcaption class="align-center">Type scale: exploration on an algorithmic scale.</figcaption>
       </figure>
@@ -256,18 +267,18 @@
       </figure>
       <figure>
         <img src="./meta/meta-19.png" alt="">
-        <figcaption class="align-center">IA & navigation: alternative index page design.</figcaption>
+        <figcaption class="align-center">Navigation: an earlier index page design.</figcaption>
       </figure>
-      <figure class="width-960">
+      <figure class="width-720">
         <img src="./meta/meta-20.png" alt="">
         <figcaption class="align-center">Content pages: playing with layout & grid.</figcaption>
       </figure>
     </section>
   </article>
 
-  <hr class="width-960">
+  <hr class="width-720">
 
-  <footer class="width-960">
+  <footer class="width-720">
     <a class="logotype" href="/">
       <img src="/resources/logotype.svg" alt="Tian Sam Xia">
     </a>
