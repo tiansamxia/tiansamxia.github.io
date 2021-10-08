@@ -257,4 +257,5 @@ a.logotype:hover {
 .profile {
     border-radius: 100%;
     height: calc(3 * var(--unit-1x));
+    width: auto;
 }
