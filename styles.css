@@ -120,7 +120,8 @@ ol, ul {
 }
 
 dfn {
-    text-decoration: underline dotted;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
 }
 
 img, video {
