@@ -26,16 +26,17 @@
 /*------------------------ Foundations -----------------------*/
 
 * {
-    margin: 0;
-    padding: 0;
-    min-height: 0vw; /* Safari resize fix */
     box-sizing: border-box;
-    font-feature-settings: "kern" 1,"liga" 1,"onum" 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    margin: 0; /* Remove default margin */
+    min-height: 0vw; /* Safari resize fix */
 }
 
 body {
+    height: 100%; /* Allow percentage-based heights */
+    font-feature-settings: "kern" 1,"liga" 1,"onum" 1;
+    -webkit-font-smoothing: antialiased; /* Disable subpixel-antialiasing on MacOS */
+    -moz-osx-font-smoothing: grayscale;
+
     font-family: var(--font-main); /* Inter */
     line-height: var(--unit-1x);
     color: var(--color-hi);
@@ -61,9 +62,9 @@ p, li {
 }
 
 small, figcaption {
+    display: block;
     font-size: var(--font-size-s);
     font-weight: 500; /* Medium */
-    display: block;
 }
 
 p strong {
@@ -125,7 +126,8 @@ dfn {
 }
 
 img, video {
-    width: 100%;
+    /* display: block; */
+    max-width: 100%;
     object-fit: scale-down;
 }
 
