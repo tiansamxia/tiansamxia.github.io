@@ -51,12 +51,12 @@ body {
     font-weight: 600; /* Semi Bold */
 }
 
-h1, h2, h3 {
+h1, h2, h3, th {
     font-size: var(--font-size-m);
     font-weight: 600; /* Semi Bold */
 }
 
-p, li {
+p, li, td {
     font-size: var(--font-size-m);
     font-weight: 400; /* Regular */
 }
@@ -143,6 +143,24 @@ hr {
     border-bottom: 1px solid var(--color-mid);
     max-width: var(--line-length);
     margin: 0 auto;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    border-bottom: 1px solid var(--color-mid);
+    padding: 0.75rem 0;
+}
+
+td {
+    width: 50%;
+    border-bottom: 1px solid var(--color-low);
+    padding: 0.75rem 0;
 }
 
 /*---------------------- Layout control ----------------------*/
