@@ -3,354 +3,161 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Axon Records • tiansamxia</title>
+  <title>Axon Records • Tian (Sam) Xia</title>
   <link rel="stylesheet" href="/styles.css"/>
   <link rel="apple-touch-icon" href="/resources/favicon.png">
 </head>
 
 <body>
-  <header>
+  <nav class="width-1104">
     <a class="back text-large" href="/">←</a>
-  </header>
+  </nav>
 
-  <article>
+  <article class="width-1104">
     <header>
-      <h1 class="text-large align-center margin-bottom-4x">Axon Records</h1>
-      
-      <figure class="width-720">
+      <div class="grid-col-2">
+        <h1 class="text-large width-360 margin-bottom-1x">Axon Records</h1>
+        <div class="margin-bottom-4x">
+          <h2 class="font-alt">Save time, save lives</h2>
+          <p>Law enforcement officers frequently spend 2–3 hours writing reports — more than a quarter of their shift. After responding to an incident, they need to document what happened and what they did, which are used for further investigation and in court.</p>
+          <p>Thus we have the impossible trinity of incident reporting: accuracy, thoroughness, and speed. Legal consequences dictate that accuracy is paramount; thoroughness can be the difference between an unsolved case and a solved one. How do we improve speed without sacrificing the other two?</p>
+          <p>Axon Records aims to reduce officers’ time spent on paperwork in half: a flexible report for capturing the structured data of an incident; a simple yet powerful text editor for writing narratives; plus real-time collaboration for multiple officers to work on the same incident.</p>
+        </div>
+      </div>
+
+      <figure>
         <img src="./axon-records/axon-records-0.png" alt="">
       </figure>
-      
-      <section>
-        <h2>Axon Records is a cloud-based records management system for law enforcement agencies. It offers a unified platform for an agency’s daily record-keeping, including incident reporting, investigations, property & evidence management, and more.</h2>
-      
-        <ul class="list-plain columns-2">
-          <li>
-            <small class="color-mid">Company</small>
-            <p>Axon</p>
-          </li>
-          <li>
-            <small class="color-mid">Industry</small>
-            <p>Public safety</p>
-          </li>
-          <li>
-            <small class="color-mid">Involvement</small>
-            <p>2018–present</p>
-          </li>
-          <li>
-            <small class="color-mid">Design team</small>
-            <p class="margin-bottom-0">3–5 people</p>
-          </li>
-        </ul>
-      </section>
     </header>
 
     <hr>
 
     <section>
-      <h2 class="text-large">Save time, save lives</h2>
+      <div class="grid-col-2">
+        <span class="text-large tabular-num margin-bottom-1x">01</span>
 
-      <p>If I ask you to think of a police officer, what would you picture? I’d guess possibly someone in uniform, either on the streets or in a patrol car — but probably <em>not</em> someone sitting in a room in front of a computer.</p>
-      <p>Yet officers today regularly spend a quarter to a third of their shift doing precisely that: typing reports into a computer. The work is necessary but tedious, inefficient, and just not what they enjoy doing — you see, even <em>we</em> imagined them somewhere else.</p>
-      <p>That’s the mission of Axon Records: saving hours, reducing cost, and giving officers their time back to serve the community and protect lives.</p>
+        <div class="margin-bottom-4x">
+          <h2 class="text-large">One report to document them all</h2>
 
-      <h3>My role on the team</h3>
-
-      <p>My focus for this project is on the incident reporting experience, which includes:</p>
-
-      <ul>
-        <li>
-          <p><strong>Report forms.</strong> I designed the <em>incident report</em> and all its forms, including offenses, people, vehicles, property, etc. Additionally, I’ve documented my philosophy and recommendations in the <em>Report Form Design Guidelines</em> to help others build new forms.</p>
-        </li>
-        <li>
-          <p><strong>Report UI.</strong> I worked on the user interface for the report composition & review experience. I’ve also been iterating the design to support new features (such as <em>collaboration</em>) and improve existing ones (such as <em>narrative composition</em>).</p>
-        </li>
-        <li>
-          <p><strong>NIBRS support.</strong> I led the effort from the design side of making our system NIBRS-compliant and helped launch NIBRS support successfully before the FBI’s December 31, 2020 deadline.</p>
-        </li>
-      </ul>
-
-      <p>Besides feature work, I’ve been hosting our weekly design critique sessions and contributing to the Axon Design System. I’m also leading the review and revision of our design principles.</p>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2 class="text-large">Incident report</h2>
-
-      <p>When officers respond to an incident, they often need to note down what happened, who they talked to, and what they did. The document they use to capture all these is the <em>incident report</em>.</p>
-      <p>As an officer would tell you, this report is not unlike a third-grade writing assignment: describe where, when, who, what, and how in a factual, accurate, and concise way. Creative storytelling is not a goal here.</p>
-      <p>In addition to the story, known as the narrative, the officer also needs to document details about each involved person, vehicle, property, etc. This documentation usually comes in the shape of forms — paper in the past, digital nowadays.</p>
-
-      <figure class="width-960">
-        <img src="./axon-records/axon-records-1.png" alt="">
-        <figcaption>Assorted examples of paper report forms.</figcaption>
-      </figure>
-      
-      <h3>How do we help officers fill out the report faster?</h3>
-
-      <p>One issue that slows the officers down is repetition: filling out the same information multiple times. It’s tedious and error-prone.</p>
-      <p>The repetition was a common problem among paper reports. Since most incidents are simple crimes — one victim, one suspect, one offense — the base report needs to be concise, usually a single sheet of paper. The side effect of this design is that every other activity requires an addendum:</p>
-
-      <ul>
-        <li>an <em>arrest form</em> for documenting an arrest;</li>
-        <li>a <em>domestic violence form</em> for reporting domestic violence;</li>
-        <li>a <em>tow form</em> for towing a vehicle.</li>
-      </ul>
-
-      <p>And so on. Because each of these forms enables a downstream workflow, they must also contain the necessary information to stand alone — which causes the repetition. For example:</p>
-
-      <ul>
-        <li>the <em>arrest form</em> repeats the suspect (who is now the arrestee);</li>
-        <li>the <em>domestic violence form</em> repeats the victim and the suspect;</li>
-        <li>the <em>tow form</em> repeats the vehicle and its owner (which could be the victim, the suspect, or someone else involved).</li>
-      </ul>
-
-      <p>All these practical limitations of paper forms should disappear when users switch to digital. However, some records management systems merely digitized the paper, and in doing so, they inherited the problem with them.</p>
-      <p>To solve this, we need to rethink how we organize the information on the incident report. Instead of scattering information across multiple “forms,” we can use the essential, unique elements of an incident — people, vehicles, property, etc. — to organize the rest.</p>
-      <p>For example, rather than adding <em>arrest</em>, <em>domestic violence</em>, and <em>DUI</em> forms to the report, we can start from the element that connects all of these — the person — and add the additional details. There’s no need to repeat the person’s information because they all stem from the same root.</p>
-
-      <figure>
-        <img src="./axon-records/axon-records-2.png" alt="">
-        <figcaption>Additional sections added on a person’s documentation.</figcaption>
-      </figure>
-
-      <p>For the elements themselves, we can let the user dynamically add them to the report as needed. Gone are the limitations imposed by the static prints. Now the user can start with a small set and keep it short for most incidents, but quickly and easily expand when the situation calls for it.</p>
-      
-      <figure>
-        <img src="./axon-records/axon-records-3.png" alt="">
-      </figure>
-
-      <p>Finally, we designed and implemented the forms following industry standards & best practices to increase efficiency, reduce errors, and maintain accessibility.</p>
-
-      <h3 class="text-large">1</h3>
-      <p><strong>Nailing the basics:</strong> labels above inputs; only ask for necessary information, when needed; ample touch target size; never use color alone to communicate meaning (e.g. statuses, errors).</p>
-
-      <figure>
-        <img src="./axon-records/axon-records-4.png" alt="">
-      </figure>
-
-      <h3 class="text-large">2</h3>
-      <p><strong>Autofill where it’s appropriate.</strong> It saves time and reduces errors. When we have the data from another source (e.g. the dispatch system), and prefilling the data won’t create bias, we offer the user a headstart with autofill.</p>
-
-      <figure>
-        <img src="./axon-records/axon-records-5.png" alt="">
-      </figure>
-
-      <h3 class="text-large">3</h3>
-      <p><strong>Reuse with ease.</strong> When it’s not appropriate to autofill, we offer an easy way to reuse previously entered information. </p>
-      <p>For example, if the user entered a person’s home address, we’ll display it as a suggestion when the user needs to enter an address again — this makes documenting members of the same household a breeze.</p>
-
-      <figure>
-        <img src="./axon-records/axon-records-6.png" alt="">
-      </figure>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2 class="text-large">Narrative composition</h2>
-
-      <p>The narrative is an officer’s account of an incident: what happened, where and when it happened, who they spoke with, and what they did to handle the situation. If a case goes to court, the narrative will be the basis of an officer’s testimony, shared with both prosecution and defense.</p>
-      <p>As a result, the narrative is usually where an officer spends most of their time writing a report. Factualness is paramount, but so is the presentation: a poorly formatted report filled with typos and grammatical errors makes an easy target for the defense attorneys.</p>
-      <p>The challenge I faced was: how do we help officers write correct, professional-looking narratives without sacrificing speed?</p>
-
-      <h3>A lighter, better, faster (text) editor</h3>
-
-      <p>Text editors run the gamut: on one end, we have <em>Microsoft Word</em>, the de facto standard word processor with millions of features; on the other end, we have <em>Notepad</em>, the default notetaking app built into every Windows operating system since 1.0.</p>
-      <p>Writing a narrative using <em>Word</em> is much like designing a user interface with <em>Photoshop</em>: not necessarily because it’s the best tool for the job, but because it’s the one given to you. Every feature not useful to the job at hand adds to the distraction and makes it harder to focus on your task.</p>
-      <p>So I decided to use an additive approach rather than a subtractive one: instead of taking a full-featured editor and try to remove the unnecessary parts, I started with an empty toolbar, looked into what features are essential to narrative writing, and added them to the editor <em>piece by piece</em>.</p>
-
-      <figure>
-        <img src="./axon-records/axon-records-7.png" alt="">
-        <figcaption>Toolbar waiting to be filled.</figcaption>
-      </figure>
-
-      <p>To identify which text editing features are most helpful to our users, I used a combination of qualitative and quantitative research.</p>
-      <p>First, I partnered with our UX researcher, and we interviewed officers and supervisors from several police agencies about what they used most often when writing narratives. The results were not surprising: font size, bold/italicize/underline, bulleted & numbered lists, etc. So far, it would seem conventional wisdom has a point.</p>
-      <p>Then, I went through every narrative template currently in use at one customer agency. I counted the usage frequency of each formatting feature and compared it against the interview results. There I found some discrepancies:</p>
-
-      <ul>
-        <li>
-          <p>Although <strong>bold/italicized/underlined</strong> text showed up frequently, they were not for emphases; instead, they were merely used as a device to make headings, differentiating them from plain text.</p>
-        </li>
-        <li>
-          <p>Meanwhile, almost no template used more than one <strong>font size</strong>, despite being mentioned by nearly every interview participant.</p>
-        </li>
-        <li>
-          <p>Many templates used brackets — [ ] or ( ) — to create <strong>checklists</strong>, a feature never mentioned by participants in the interviews.</p>
-        </li>
-      </ul>
-
-      <p>The difference between the qualitative and quantitative results made me realize that what the users <em>think</em> they do may not match their actual behavior; what they ask for is often biased by the status quo, hiding their real needs beneath.</p>
-      <p>From the research, I made a few adjustments to the design:</p>
-
-      <ul>
-        <li>
-          <p><strong>Prioritize headings.</strong> Add shortcuts for three levels of headings (title, heading, subheading) to the toolbar and promote their usage for fast, consistent heading creation.</p>
-        </li>
-        <li>
-          <p><strong>Deprioritize bold/italicize/underline.</strong> Remove B/I/U shortcuts from the toolbar to discourage their usage for making headings. Keep supporting them (via hotkeys) to maintain compatibility.</p>
-        </li>
-        <li>
-          <p><strong>Add checklists feature.</strong> Support checklists to help officialize their usage in narratives.</p>
-        </li>
-      </ul>
-
-      <p>To make the transition easier, I also converted all existing narrative templates to the new format.</p>
-
-      <figure>
-        <img src="./axon-records/axon-records-8.png" alt="">
-        <figcaption class="align-center">Title (P0)</figcaption>
-      </figure>
-      <figure>
-        <img src="./axon-records/axon-records-9.png" alt="">
-        <figcaption class="align-center">Heading (P0)</figcaption>
-      </figure>
-      <figure>
-        <img src="./axon-records/axon-records-10.png" alt="">
-        <figcaption class="align-center">Subheading (P0)</figcaption>
-      </figure>
-      <figure>
-        <img src="./axon-records/axon-records-11.png" alt="">
-        <figcaption class="align-center">Paragraph (P0)</figcaption>
-      </figure>
-      <figure>
-        <img src="./axon-records/axon-records-12.png" alt="">
-        <figcaption class="align-center">Bulleted list (P1)</figcaption>
-      </figure>
-      <figure>
-        <img src="./axon-records/axon-records-13.png" alt="">
-        <figcaption class="align-center">Numbered list (P1)</figcaption>
-      </figure>
-      <figure>
-        <img src="./axon-records/axon-records-14.png" alt="">
-        <figcaption class="align-center">Checklist (P2)</figcaption>
-      </figure>
-      <figure>
-        <img src="./axon-records/axon-records-15.png" alt="">
-        <figcaption class="align-center">Block quote (P2)</figcaption>
-      </figure>
-    </section>
-
-    <hr>
-
-    <section>
-      <h2 class="text-large">Collaborative reporting</h2>
-
-      <p>When police officers respond to an incident, it is common to have one primary and several supporting officers dividing the work. Reasons for this include:</p>
-
-      <ul>
-        <li>
-          <p><strong>Distribute the workload:</strong> e.g. interviewing multiple witnesses separately at the same time;</p>
-        </li>
-        <li>
-          <p><strong>Prioritize time-sensitive tasks:</strong> e.g. transporting and booking an arrestee.</p>
-        </li>
-        <li>
-          <p><strong>“CBE” (can’t be everywhere):</strong> e.g. accompanying the victim to the hospital while others continue the investigation on scene.</p>
-        </li>
-      </ul>
-
-      <p>As a result, the incident documentation is also divided; the primary officer usually composes the base report, then supporting officers will each add their contribution via a supplemental one.</p>
-      <p>There are a few drawbacks to this approach. First, contributors could duplicate their work unintentionally, wasting precious time. Second, if one contributor makes an update to the incident (e.g. an <em>assault</em> becomes a <em>homicide</em>), the change may not propagate to subsequent reports timely, creating documentation discrepancies.</p>
-      <p>Finally, when the reports are ready for approval, reviewers must piece together every document to get a whole picture of the incident, identifying the delta between each while looking for factual errors — a very time-consuming process.</p>
-      <p>The collaborative reporting experience offers a shared workspace for users to contribute to the same incident, see one another’s work in real-time, and make edits when necessary. Moreover, reviewers can now see the full incident without having to solve a mental jigsaw puzzle, and they can focus on the officers’ writing instead.</p>
-
-      <h3>Understanding collaborative reporting workflows</h3>
-
-      <p>Real-time collaboration is not a novel concept outside the realm of report writing: online documentation tools such as <em>Google Docs</em> popularized the idea; even some design tools (such as <em>Figma</em>) now support it.</p>
-      <p>To bring collaboration into incident reporting, we needed to identify the scenarios where multiple users need to collaborate on the same incident. My goal was to use a small set of examples based on real-world incidents to cover most use cases. To do that, I reached out to my colleagues who used to work in law enforcement for help.</p>
-      <p>From our conversations, I came up with the following scenarios.</p>
-
-      <h3 class="text-large">1</h3>
-      <p><strong>Active burglary.</strong> A classic real-time collaboration scenario where two officers divided the work and needed to document their contributions individually.</p>
-
-      <figure class="width-960">
-        <img src="./axon-records/axon-records-16.png" alt="">
-      </figure>
-
-      <h3 class="text-large">2</h3>
-      <p><strong>Stolen & recovered vehicle.</strong> In this scenario, the collaboration happens asynchronously as one officer documents the theft first, the other adds the vehicle recovery days later.</p>
-
-      <figure class="width-960">
-        <img src="./axon-records/axon-records-17.png" alt="">
-      </figure>
-
-      <h3 class="text-large">3</h3>
-      <p><strong>Assault → homicide.</strong> A scenario where the nature of the crime changes as the investigation progresses.</p>
-
-      <figure class="width-960 margin-bottom-4x">
-        <img src="./axon-records/axon-records-18.png" alt="">
-      </figure>
-
-      <h3>Updating the report UI for collaboration</h3>
-
-      <p>Next, we needed to revamp the report navigation UI to support the new collaboration experience. The goals were:</p>
-
-      <ul>
-        <li>Add visual indicators for contributors of each section.</li>
-        <li>Display more content in the same vertical space.</li>
-        <li>Simplify UI elements without sacrificing the level of details.</li>
-        <li>Create a reusable design for displaying navigational content.</li>
-      </ul>
-
-      <p>Besides the goals, there was also a non-goal: we do not need to show which collaborators are currently in the report. It is inessential and potentially distracting to the officers working on their narrative.</p>
-      <p>With these, I updated the navigation UI with the following changes.</p>
-
-      <figure>
-        <img src="./axon-records/axon-records-19.png" alt="">
-      </figure>
-
-      <h3 class="text-large">1</h3>
-      <p><strong>Contributor indicator.</strong> Initials of the contributor show next to the sections they last edited.</p>
-
-      <h3 class="text-large">2</h3>
-      <p><strong>Nav item display options.</strong> Nav items with fewer details can now display at a shorter size to save vertical space.</p>
-
-      <h3 class="text-large">3</h3>
-      <p class="margin-bottom-4x"><strong>Collapsible groups.</strong> Users can now collapse groups of nav items to make navigating long lists faster.</p>
-
-      <h3 class="text-large align-center">More details</h3>
-
-      <div class="grid-col-2 width-720">
-        <figure class="margin-bottom-0">
-          <img src="./axon-records/axon-records-20.png">
-          <figcaption class="align-center">Navigational structure.</figcaption>
-        </figure>
-
-        <figure>
-          <img src="./axon-records/axon-records-21.png">
-          <figcaption class="align-center">Anatomy of a nav item.</figcaption>
-        </figure>
+          <p>In the past, law enforcement agencies used various paper forms to document an incident. Driving under the influence? Use a DUI form. Stolen valuables? Pull out a property sheet. Arrests made? Fill out an arrest report — one for each arrestee.</p>
+          <p>This created two problems. First, key elements of an incident — names, addresses, vehicles, etc. — often need to be filled out many times in multiple forms, wasting time and introducing human error. Second, updates to those elements — name of a previously unknown victim, license plate of a suspect’s car — can’t easily propagate through all reports, making it difficult for investigators to understand the latest status of an incident.</p>
+          <p>When agencies moved to digital, the computer systems they used usually inherited these problems rather than fixing them. We can do better. In Axon Records, our goal is to never make you enter the same information twice, and to always keep the facts up to date. To do that, we created a dynamic report that can be tailored to each incident and expanded as it develops.</p>
+        </div>
       </div>
 
-      <figure class="width-720 margin-bottom-4x">
-        <img src="./axon-records/axon-records-22.png">
-        <figcaption class="align-center">Scalable item display sizes.</figcaption>
-      </figure>
-
-      <figure class="width-720">
-        <img src="./axon-records/axon-records-23.png">
-        <figcaption class="align-center">View control for reviewers.</figcaption>
-      </figure>
+      <div class="gallery">
+        <figure>
+          <img src="./axon-records/axon-records-1.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-2.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-3.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-4.png" alt="">
+        </figure>
+      </div>
     </section>
 
-    <hr class="width-720">
+    <hr>
 
     <section>
-      <h2 class="text-large width-720">More to come…</h2>
+      <div class="grid-col-2">
+        <span class="text-large tabular-num margin-bottom-1x">02</span>
+
+        <div class="margin-bottom-4x">
+          <h2 class="text-large">Narrative editor</h2>
+
+          <p>Officers spend the bulk of their time writing the narrative: their account of what happened, who was involved, and what they did at the scene. It’s the “police report” we commonly think of.</p>
+          <p>When writing a narrative, officers typically follow a template for the type of incident they’re documenting. They start by making a copy of the template file in Microsoft Word, then continue to fill in the details. Once the narrative is complete, they copy and paste it into the reporting software used by their agency.</p>
+          <p>We want to offer a compelling alternative to writing in Word. First, we worked with agencies to integrate their templates into Axon Records. Then, we built a narrative editor with only the essential writing tools officers need, plus autosave to the cloud so they never lose their work. For those still unconvinced, we made an effort to preserve text formatting when a narrative is pasted into Axon Records.</p>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <figure>
+          <img src="./axon-records/axon-records-5.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-6.png" alt="">
+        </figure>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <div class="grid-col-2">
+        <span class="text-large tabular-num margin-bottom-1x">03</span>
+
+        <div class="margin-bottom-4x">
+          <h2 class="text-large">Real-time collaboration</h2>
+
+          <p>When multiple officers respond to the same incident, they often divide the tasks among themselves, such as interviewing witnesses, cataloging lost property, and booking an arrestee. Each officer then needs to document their contributions.</p>
+          <p>Traditionally, this is done through a primary report and several supplemental reports. This approach creates a bottleneck because supporting officers have to wait for the primary officer to start. It also presents a challenge for reviewers who must sift through (sometimes conflicting) information from multiple sources to get the full picture of an incident.</p>
+          <p>In contrast, real-time collaboration allows officers to work on the same incident report simultaneously, similar to how Google Docs works. It maintains a single source of truth that everyone can contribute to or modify at any time. It also gives reviewers a complete view of an incident without duplicative information.</p>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="grid-col-2">
+          <figure>
+            <img src="./axon-records/axon-records-7.png" alt="">
+          </figure>
+          <figure>
+            <img src="./axon-records/axon-records-8.png" alt="">
+          </figure>
+        </div>
+        <figure>
+          <img src="./axon-records/axon-records-9.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-10.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-11.png" alt="">
+        </figure>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2 class="text-large margin-bottom-4x">Project artifacts</h2>
+
+      <div class="gallery">
+        <figure>
+          <img src="./axon-records/axon-records-12.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-13.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-14.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-15.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-16.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-17.png" alt="">
+        </figure>
+        <figure>
+          <img src="./axon-records/axon-records-18.png" alt="">
+        </figure>
+      </div>
     </section>
   </article>
   
-  <hr class="width-720">
+  <hr class="width-1104">
 
-  <footer class="width-720">
-    <a class="logotype" href="/">
-      <img src="/resources/logotype.svg" alt="Tian Sam Xia">
-    </a>
-
-    <small class="align-right">Crafted in Seattle<br>© 2022</small>
+  <footer class="width-1104 grid-col-2">
+    <p class="margin-0"><a class="color-mid no-underline" href="/">tiansamxia.com</a></p>
+    <p class="color-mid">© 2025</p>
   </footer>
 </body>
 </html>

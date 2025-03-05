@@ -3,170 +3,131 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WUPOS Dashboard • tiansamxia</title>
+  <title>WUPOS Dashboard • Tian (Sam) Xia</title>
   <link rel="stylesheet" href="/styles.css"/>
   <link rel="apple-touch-icon" href="/resources/favicon.png">
 </head>
 
 <body>
-  <header class="width-720">
+  <nav class="width-1104">
     <a class="back text-large" href="/">←</a>
-  </header>
+  </nav>
 
-  <article>
+  <article class="width-1104">
     <header>
-      <h1 class="text-large align-center margin-bottom-4x">WUPOS Dashboard</h1>
-      
-      <figure class="width-720">
+      <div class="grid-col-2">
+        <h1 class="text-large width-360 margin-bottom-1x">WUPOS Dashboard</h1>
+        <div class="margin-bottom-4x">
+          <p>Western Union agents use a dashboard on the point-of-sale system to monitor their transaction volume, amount, and commissions. They want to view the data by week, month, and year and compare it over time.</p>
+          <p>The existing dashboard has limited features and poor usability, leading agents to rely on printouts instead. We were asked by the client to redesign the dashboard.</p>
+        </div>
+      </div>
+
+      <figure>
         <img src="./wupos-dashboard/wupos-dashboard-0.png" alt="">
       </figure>
-      
-      <section>
-        <h2>WUPOS Dashboard is a data analytics and visualization tool within the point-of-sale system for Western Union agents.</h2>
-      
-        <ul class="list-plain columns-2">
-          <li>
-            <small class="color-mid">Client</small>
-            <p>Western Union</p>
-          </li>
-          <li>
-            <small class="color-mid">Industry</small>
-            <p>Financial services</p>
-          </li>
-          <li>
-            <small class="color-mid">Involvement</small>
-            <p>2016 (2 months)</p>
-          </li>
-          <li>
-            <small class="color-mid">Design team</small>
-            <p class="margin-bottom-0">2 people</p>
-          </li>
-        </ul>
-      </section>
     </header>
 
-    <hr class="width-720">
+    <hr>
 
     <section>
-      <div class="width-720 grid-col-2">
-        <figure class="width-288 margin-top-0">
-          <img src="./wupos-dashboard/wupos-dashboard-1.png" alt="">
-        </figure>
+      <div class="grid-col-2">
+        <span class="text-large tabular-num margin-bottom-1x">01</span>
 
         <div>
-          <h3 class="margin-top-0">Problems with the existing dashboard:</h3>
+          <h2 class="text-large">The status quo</h2>
 
-          <ul>
+          <ul class="margin-bottom-2x">
             <li>
-              <p>Users can only view data by manually entered date ranges.</p>
+              <p>Manual date range only — no shortcuts for frequently used ranges such as week, month, or year</p>
             </li>
             <li>
-              <p>Redundant yet inadequate charts and graphs.</p>
+              <p>Limited customizability for the charts and graphs</p>
             </li>
             <li>
-              <p>No way to compare data digitally; users are forced to rely on printouts.</p>
+              <p>Lacking a way to compare data over time</p>
             </li>
             <li>
-              <p>Broken, touch-unfriendly UI.</p>
+              <p>UI isn’t touch-friendly (the POS system runs on a touchscreen device)</p>
             </li>
           </ul>
 
-          <h3>Goals for the redesign:</h3>
-          
+          <figure class="width-258">
+            <img src="./wupos-dashboard/wupos-dashboard-1.png" alt="">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <div class="grid-col-2">
+        <span class="text-large tabular-num margin-bottom-1x">02</span>
+
+        <div class="margin-bottom-4x">
+          <h2 class="text-large">The redesign</h2>
+
           <ul>
             <li>
-              <p>Provide shortcuts for commonly used time frames to view data.</p>
+              <p>Easily toggle between week, month, year, and year-on-year views (custom date range is still an option)</p>
             </li>
             <li>
-              <p>Revamp the charts & graphs.</p>
+              <p>Flexible ways to filter, sort, and compare data</p>
             </li>
             <li>
-              <p>Make comparison a breeze.</p>
+              <p>Modern, touch-friendly UI</p>
             </li>
             <li>
-              <p>Fix the UI; add touch support.</p>
+              <p>Typography and color consistent with the Western Union brand</p>
             </li>
           </ul>
         </div>
+      </div>
 
-        
+      <div class="gallery">
+        <figure>
+          <img src="./wupos-dashboard/wupos-dashboard-2.gif" alt="">
+        </figure>
+        <figure>
+          <img src="./wupos-dashboard/wupos-dashboard-3.png" alt="">
+        </figure>
+        <figure>
+          <img src="./wupos-dashboard/wupos-dashboard-4.png" alt="">
+        </figure>
+        <figure>
+          <img src="./wupos-dashboard/wupos-dashboard-5.png" alt="">
+        </figure>
+        <figure>
+          <img src="./wupos-dashboard/wupos-dashboard-6.png" alt="">
+        </figure>
       </div>
     </section>
 
-    <hr class="width-720">
+    <hr>
 
     <section>
-      <h2 class="text-large width-720">The redesigned dashboard</h2>
+      <h2 class="text-large margin-bottom-4x">Project artifacts</h2>
 
-      <h3 class="width-720">Easily switch between week, month, year, and year-on-year views.</h3>
-
-      <figure class="width-720 margin-bottom-4x">
-        <img src="./wupos-dashboard/wupos-dashboard-2.gif">
-        <figcaption>Demo of the view switch.</figcaption>
-      </figure>
-      
-      <h3 class="width-720">Bye-bye, pies. Hello, bars. Now compare data effortlessly.</h3>
-
-      <figure class="width-720">
-        <img src="./wupos-dashboard/wupos-dashboard-3.png">
-        <figcaption>Vertical analysis across corridors.</figcaption>
-      </figure>
-
-      <figure class="width-720 margin-bottom-4x">
-        <img src="./wupos-dashboard/wupos-dashboard-4.png">
-        <figcaption>Horizontal analysis over time.</figcaption>
-      </figure>
-
-      <h3 class="width-720">Sort, filter, and customize charts & graphs to your heart’s content.</h3>
-
-      <figure class="width-720">
-        <img src="./wupos-dashboard/wupos-dashboard-5.png">
-        <figcaption>Sort data in various ways.</figcaption>
-      </figure>
-
-      <figure class="width-720">
-        <img src="./wupos-dashboard/wupos-dashboard-6.png">
-        <figcaption>Switch to percentage view for easy comparison.</figcaption>
-      </figure>
-    </section>
-
-    <hr class="width-960">
-
-    <section>
-      <h2 class="text-large width-960">Project artefacts</h2>
-
-      <div class="width-960 grid-col-2">
-        <figure class="margin-bottom-0">
-          <img src="./wupos-dashboard/wupos-dashboard-7.jpg" alt="">
+      <div class="gallery">
+        <figure>
+          <img src="./wupos-dashboard/wupos-dashboard-7.png" alt="">
         </figure>
-
-        <figure class="margin-bottom-0">
-          <img src="./wupos-dashboard/wupos-dashboard-8.jpg" alt="">
+        <figure>
+          <img src="./wupos-dashboard/wupos-dashboard-8.png" alt="">
+        </figure>
+        <figure>
+          <img src="./wupos-dashboard/wupos-dashboard-9.png" alt="">
         </figure>
       </div>
-      
-      <figure class="width-960">
-        <img src="./wupos-dashboard/wupos-dashboard-9.png" alt="">
-      </figure>
-
-      <figure class="width-960">
-        <img src="./wupos-dashboard/wupos-dashboard-10.png" alt="">
-      </figure>
-
-      <figure class="width-960">
-        <img src="./wupos-dashboard/wupos-dashboard-11.png" alt="">
-      </figure>
     </section>
   </article>
   
-  <hr class="width-960">
+  <hr class="width-1104">
 
-  <footer class="width-960">
-    <a class="logotype" href="/">
-      <img src="/resources/logotype.svg" alt="Tian Sam Xia">
-    </a>
-
-    <small class="align-right">Crafted in Seattle<br>© 2022</small>
+  <footer class="width-1104 grid-col-2">
+    <p class="margin-0"><a class="color-mid no-underline" href="/">tiansamxia.com</a></p>
+    <p class="color-mid">© 2025</p>
   </footer>
 </body>
 </html>

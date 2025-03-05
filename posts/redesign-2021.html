@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redesigning tiansamxia.com • Tian (Sam) Xia</title>
+  <link rel="stylesheet" href="/styles.css"/>
+  <link rel="apple-touch-icon" href="/resources/favicon.png">
+</head>
+
+<body>
+  <nav class="width-1104">
+    <a class="back text-large" href="/">←</a>
+  </nav>
+
+  <article class="width-1104">
+    <header class="grid-col-2">
+      <hgroup class="margin-bottom-2x">
+        <h1 class="text-large width-360">Redesigning tiansamxia.com</h1>
+        <time class="text-large color-mid">May 2021</time>
+      </hgroup>
+
+      <div>
+        <img class="margin-bottom-2x" src="./redesign-2021/redesign-2021-0.png" alt="">
+        <p>This document describes the thinking process and design decisions behind this website, tiansamxia.com. In doing so, it also demonstrates my approach to writing a UX design doc.</p>
+        <p>See also: <a href="/writing/design-ethos.html" target="_blank">Design Ethos</a>.</p>
+      </div>
+    </header>
+
+    <hr>
+
+    <section class="grid-col-2">
+      <h2 class="text-large width-360">Context and scope</h2>
+      <div>
+        <p>tiansamxia.com is my personal website where I showcase my work and share projects, photos, and writings. Previously, I had created and hosted the site with Squarespace. In this version, I decided to design and code it by myself.</p>
+        <p>Using services like Squarespace allowed me to focus on the content — the most important, no doubt — but required giving up fine control over its presentation. I became a passenger rather than the driver. I also didn’t have full ownership over my site: it was “mine” as long as I paid the rent; once stopped, I’d need to move all my stuff out if I didn’t want to lose them.</p>
+        <p>Crafting the site myself is an opportunity to bring everything back to the essentials: no CMS, database, or JavaScript frameworks; just plain, straightforward HTML & CSS written by a human, readable by another. I can also use this chance to catch up on the latest web technology and practice my HTML and CSS skills.</p>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="grid-col-2">
+      <h2 class="text-large width-360">Goals</h2>
+      <ul class="margin-bottom-0">
+        <li>
+          <p><strong>Back to the essentials:</strong> text, images, video, etc., all marked up in HTML and styled with global CSS — zero JavaScript.</p>
+        </li>
+        <li>
+          <p><strong>Quiet & understated:</strong> the design should serve the content and not attract attention itself. “As little design as possible.”</p>
+        </li>
+        <li>
+          <p><strong>Typography-first:</strong> text as an interface — use typographic rather than graphic treatments to define layout & structure.</p>
+        </li>
+        <li>
+          <p><strong>Follow <a href="https://frankchimero.com/blog/2015/the-webs-grain/">the web’s grain</a>:</strong> a web experience true to its building materials; no scroll-hijacking or over-the-top animations.</p>
+        </li>
+        <li>
+          <p><strong>Fast & responsive:</strong> “to add speed, add lightness” — a petite website is easier to implement and performs better.</p>
+        </li>
+        <li>
+          <p><strong>Low maintenance:</strong> minimize dependency on third-party tools and services. Choose open-source over proprietary.</p>
+        </li>
+        <li>
+          <p><strong>Have some fun:</strong> I tend to make things look too serious, so this is a reminder for myself.</p>
+        </li>
+      </ul>
+    </section>
+    
+    <hr>
+
+    <section class="grid-col-2">
+      <h2 class="text-large width-360">Non-goals</h2>
+      <ul class="margin-bottom-0">
+        <li>
+          <p><strong>Make an impression.</strong> It’s not a goal to create a novel or eccentric site that stands out. Let the work speak for itself.</p>
+        </li>
+        <li>
+          <p><strong>Fully responsive design.</strong> It shouldn’t break on a phone, but responsive grid and images can come later.</p>
+        </li>
+        <li>
+          <p><strong>Legacy browser support.</strong> If you’re reading this on the latest stable version of Safari, Firefox, or Chrome, you will be fine.</p>
+        </li>
+        <li>
+          <p><strong>Light & dark themes, keyboard shortcuts, etc.</strong> These are nice-to-haves that may come in the future, but not now.</p>
+        </li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="grid-col-2">
+      <h2 class="text-large width-360">Detailed design</h2>
+
+      <div>
+        <p>In the sections below, I’ll cover some design decisions and the rationale behind them. Although it looks tidy and linear here, the actual process was far more convoluted and interwoven: changing the primary typeface affects the body text size, the text size affects the grid, et cetera, et cetera. See <em>alternatives considered</em> section for select detours and deadends.</p>
+
+        <h3>Typeface: Inter & EB Garamond</h3>
+
+        <p>The fewer fonts a website uses, the faster it loads (goal: “fast & responsive”). Therefore I decided to use only one typeface for almost everything: body text, titles, headings, captions, etc.</p>
+        <p>Bonus challenge: the chosen typeface should look similar to system fallbacks — <em>San Francisco</em>, <em>Roboto</em>, <em>Segoe UI</em>, etc. — so even if the webfont doesn’t load correctly, the site still looks alright (goal: “low maintenance”).</p>
+        <p>I chose Rasmus Andersson’s <a href="https://rsms.me/inter/" target="_blank">Inter</a> because it is:</p>
+        <ul>
+          <li>Highly legible, even at small sizes (body & caption text);</li>
+          <li>Available as a <em>variable font</em> (wide range of design variants);</li>
+          <li>Designed for UI (where its name came from);</li>
+          <li>Free & open-source (“low maintenance”).</li>
+        </ul>
+        <p>Besides Inter, I also used <a href="http://www.georgduffner.at/ebgaramond/" target="_blank">EB Garamond</a>, an open-source, digital replication of the classic serif face designed by 16th-century typographer Claude Garamont. It complements the main sans-serif face and shows up sparingly on the site.</p>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-1.png" alt="">
+        </figure>
+
+        <h3>Type scale: 14 • 18 • 24</h3>
+
+        <p>Next, I needed to determine the body text size and use it as the basis for a type scale. To do that, I first needed to set some boundaries:</p>
+        <ul>
+          <li>Base unit: 8 px, or 0.5 rem (“follow the web’s grain”);</li>
+          <li>Line height: 1, 1.5, or 2 rem;</li>
+          <li>Line length: 65–75 characters per line (“typography-first”);</li>
+          <li>Narrowest viewport supported: 320 px.</li>
+        </ul>
+        <p>After extensive experiments, I set the body text size at 18 px. Line height is 24 px (1.5 rem), which is also the unit for spacing: 2-line is 48 px, 4-line is 96 px, and so on.</p>
+        <p><small>Aside: Contrary to conventional belief, there isn’t a strong need to adjust text size based on the device; manufacturers have already done that work for us. For instance, iPhone’s screen has a pixel density about 20% higher than iPad’s, so texts on iPhone will be about 20% smaller — if compared side by side. However, because we typically hold our phones closer, their optical sizes will be similar. The viewing distance compensated for the difference in absolute size.</small></p>
+        <p>Using the line height as a guide, I settled on one smaller and one larger text size: 14 px for captions and footnotes; 24 px for titles and big headings. These three sizes form the type scale.</p>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-2.png" alt="">
+        </figure>
+
+        <h3>Hierarchy: one change at a time</h3>
+
+        <p>With the type scale defined, I moved on to creating a structure within the text. There are five levels of hierarchy in my content:</p>
+        <ol>
+          <li>Title</li>
+          <li>Heading</li>
+          <li>Subheading</li>
+          <li>Body</li>
+          <li>Caption/footnote/etc.</li>
+        </ol>
+        <p>One way to visually communicate this structure is to increase text size as the level moves up: subheadings bigger than body texts, headings bigger than subheadings, and so forth. That’s also the default behavior of headings in HTML. The problem is, text size often inflates so quickly that we end up with comically huge titles.</p>
+        <p>But size isn’t the only tool for creating hierarchy. Here’s a list of typographic tools at our disposal, adapted from <a href="https://frankchimero.com/blog/2020/scales-and-hierarchy/" target="_blank">Frank Chimero</a>:</p>
+        <ul>
+          <li>White space</li>
+          <li>Size</li>
+          <li>Weight</li>
+          <li>Style (italic, small caps, or a different typeface altogether)</li>
+          <li>Color (this is borderline between typographic and graphic)</li>
+        </ul>
+        <p>My approach: use one tool at a time, and use the smallest increment necessary (goal: “quiet & understated”).</p>
+        <p>I started with the obvious: subheadings are the same size as body text, only in a heavier weight (semi-bold):</p>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-3.png" alt="">
+        </figure>
+        <p>Next, headings are the same weight as subheadings, but in a larger size (I also added an extra line of white space to make them more prominent):</p>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-4.png" alt="">
+        </figure>
+        <p>Finally, we have the title. Since there’s only one title per page, and it’s already at the top, it’ll be too much to increase size or weight further. Instead, I kept the title the same size & weight as subheadings and used white space to do the trick (if the page has a subtitle, it’ll be in a lighter color):</p>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-5.png" alt="">
+        </figure>
+        <p>Of course, the exact sizing and spacing can vary based on the page: the hierarchy should serve the content, not the other way around (“quiet & understated”).</p>
+
+        <h3>Color: monochromatic</h3>
+
+        <p>Color is perhaps the easiest decision: greyscale only. I used three shades of grey for high (primary content), medium (supporting content), and low contrast against the background. The default color theme is dark.</p>
+        <p>Why dark? Here’s the logic:</p>
+        <ul>
+          <li>To simplify implementation, I’ll begin with just one theme;</li>
+          <li>Light theme is too bright in the dark; dark theme works in either light or dark;</li>
+          <li>Bonus: a pure black background can save energy on OLED displays, in addition to protecting the eyes.</li>
+        </ul>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-6.png" alt="">
+        </figure>
+
+        <h3>Grid: it’s complicated (but doesn’t have to be)</h3>
+
+        <p>I’ll confess: I have an obsession with grid systems. I lose myself in tweaking the numbers for the gutters, columns, and margins like solving a sudoku puzzle. I win if they’re all integers divisible by 8.</p>
+        <p>So after sinking hundreds of hours designing “the ultimate grid system,” my conclusion is: grid for the web is hard. I know.</p>
+        <p>Multi-column grids, which are fantastic for print, don’t work on the web. A web page is bottomless, so the content will keep flowing until <em>it</em> ends — not where the <em>page</em> ends. You could force a multi-column design, sure, but it breaks as soon as the viewport gets too narrow — because a web page is also not opinionated about its width. It can go from 320 px to 2560 px and beyond: that’s a difference between 1 and 8 columns.</p>
+        <p>What do we do, then? Well, we can go the easy way or the hard way.</p>
+        <p>The hard way is: change the layout every time it wants to break. So if you started with an 8-column design, it will change to 6, 4, 2, and eventually a single column. Lots of details to think about and lots of work to get them right, of course.</p>
+        <p>Or you can choose the easy way: start with just one column (a.k.a. <em>mobile-first</em>). You could still have 2-up or 3-up layouts when there’s enough room, but it “just works” as the viewport gets wider. The only thing to worry about is text measure (unless you want your site to look like <em>Wikipedia</em>).</p>
+        <p>For my website, I chose the second approach. Content starts with a single column; text blocks have a max-width of 600 px (roughly 75 characters); media can go beyond that depending on its aspect ratio:</p>
+        <ul>
+          <li>480×720 px (2:3)</li>
+          <li>540×720 px (3:4)</li>
+          <li>600×600 px (1:1)</li>
+          <li>720×540 px (4:3)</li>
+          <li>720×480 px (3:2)</li>
+          <li>960×540 px (16:9)</li>
+          <li>960×480 px (2:1)</li>
+        </ul>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-7.png" alt="">
+        </figure>
+        <p>To add variety and prevent pages from looking like they’re from the early 2000s, I also used an asymmetrical 2-column layout on the home page and some content pages (including this one). Thanks to CSS Grid, they gracefully revert to single-column when the viewport is narrow.</p>
+
+        <h3>Navigation: always just one step away from home</h3>
+
+        <p>Older versions of my website used to have three levels: home, collections (“work,” “photography,” etc.), and content pages. In this version, I reduced it down to two: home and content.</p>
+        <p>Something magical happens to the navigation when there are only two levels: you don’t need any. Anywhere on the site, you are only one step away from home. Gone are the landing pages for each collection, a persistent header with links, and a mini sitemap in the footer. The new “header” is just a back button.</p>
+        <p>The new home page also returns to its roots: an index of the entire site (goal: “back to the essentials”). The footer, relieved from its sitemap-bearing duty, now contains only one link — to go home, so you don’t have to scroll back to the top again.</p>
+
+        <figure>
+          <img src="./redesign-2021/redesign-2021-8.png" alt="">
+        </figure>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-9.png" alt="">
+        </figure>
+
+        <p>Besides indexing content, the home page also absorbs the former “about” and “contact” pages. Now it’s one less click/tap to find a blurb about me or ways to connect.</p>
+
+        <h3>Logotype & favicon: understated fun</h3>
+
+        <p>Perhaps the only “personality” I added to my otherwise neutral and sterile website is the logotype and favicon design (goal: “have some fun”).</p>
+        <p>The logotype idea came after numerous attempts at creating a personal logo from my name. “What if I stacked them?” — hmm, interesting. “How about all lowercase?” — nope, that didn’t work. “What if I aligned them by the shared letter <strong>a</strong>?” — now we’re getting somewhere.</p>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-10.png" alt="">
+        </figure>
+        <p>The favicon was a classic example of “limitation galvanizes imagination”: at 16×16 px size, no details in the logotype were discernable. So I kept reducing the mark until there was only one letter left: <strong>a</strong>.</p>
+        <figure>
+          <img src="./redesign-2021/redesign-2021-11.png" alt="">
+        </figure>
+      </div>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2 class="width-1104">Alternatives considered</h2>
+
+      <figure class="width-1104">
+        <img src="./redesign-2021/redesign-2021-12.png" alt="">
+        <figcaption class="align-center">Typeface: sans & serif alternatives.</figcaption>
+      </figure>
+      <figure class="width-1104">
+        <img src="./redesign-2021/redesign-2021-13.png" alt="">
+        <figcaption class="align-center">Line height & line length: an analysis.</figcaption>
+      </figure>
+      <figure class="width-1104">
+        <img src="./redesign-2021/redesign-2021-14.png" alt="">
+        <figcaption class="align-center">Type scale: exploration on an algorithmic scale.</figcaption>
+      </figure>
+      <figure class="width-1104">
+        <img src="./redesign-2021/redesign-2021-15.png" alt="">
+        <figcaption class="align-center">Hierarchy: testing with filler content.</figcaption>
+      </figure>
+      <figure class="width-1104">
+        <img src="./redesign-2021/redesign-2021-16.png" alt="">
+        <figcaption class="align-center">Grid: media & responsiveness.</figcaption>
+      </figure>
+    </section>
+  </article>
+
+  <hr class="width-1104">
+
+  <footer class="width-1104 grid-col-2">
+    <p class="margin-0"><a class="color-mid no-underline" href="/">tiansamxia.com</a></p>
+    <p class="color-mid">© 2025</p>
+  </footer>
+</body>
+</html>
